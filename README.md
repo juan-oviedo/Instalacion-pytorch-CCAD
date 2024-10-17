@@ -57,7 +57,7 @@ Una vez instalado PyTorch, abrir Jupyter con:
 ```
 El sistema generará un enlace como el siguiente:
 ```bash 
-http://localhost:1235/tree?token=8a1520a7bd3aa8b22cb0218be18d5e86c2bcbf877b048587
+http://localhost:1234/tree?token=8a1520a7bd3aa8b22cb0218be18d5e86c2bcbf877b048587
 ```
 Es importante utilizar el mismo puerto por el cual se conectaron. Si Jupyter no se abre y muestra un error de `connection_refused`, conectarse al nodo nuevamente con un puerto distinto e intentar de nuevo.
 
