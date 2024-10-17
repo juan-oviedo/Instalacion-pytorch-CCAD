@@ -97,9 +97,16 @@ en la notebook o en una terminal conectada al nodo. Luego, reiniciar el kernel s
 
 En una nueva celda, agregar:
 ```python
-model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct" device = torch.device("cuda" if torch.cuda.is_available() else raise ValueError("No se reconoció GPU."))
+model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct" 
+
+if  torch.cuda.is_available():
+    device = "cuda"
+else:
+    raise ValueError("No se reconoció GPU.")
+
 pipeline = transformers.pipeline(
-	"text-generation", model=model_id,
+	"text-generation", 
+	model=model_id,
 	model_kwargs={"torch_dtype": torch.bfloat16},
 	device=device
 )
