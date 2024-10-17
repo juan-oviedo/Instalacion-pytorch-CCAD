@@ -113,3 +113,18 @@ messages = [
 output = pipeline(messages, max_new_tokens=500)
 print(output[0]["generated_text"][2]['content'])
 ```
+
+## Primer Uso de la Librería Transformers
+
+Si es la primera vez que utilizan la librería `transformers`, necesitarán crear una cuenta en [Hugging Face](https://huggingface.co/).
+
+Además, es necesario solicitar acceso a **Meta-Llama-3.1-8B-Instruct**. Para ello, visitar la página del modelo en [Hugging Face](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) y conceder los permisos solicitados.
+
+## Generar un Token para Hugging Face
+
+Para que Jupyter tenga acceso a Hugging Face, se necesita generar un token. El token se puede crear en [Hugging Face Tokens](https://huggingface.co/settings/tokens).
+
+Luego, ejecutar el siguiente comando en la terminal y seguir las instrucciones:
+```bash 
+huggingface-cli login
+```
